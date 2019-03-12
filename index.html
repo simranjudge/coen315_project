@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- google font (Thasadith) -->
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ecosystems - self-caring planters</title>
+        
+    </head>
+    <body>
+        <header>
+            <h1>ecosystems</h1>
+            <h2>Fresh Herbs With Zero Effort</h2>
+        </header>
+        <main>
+            <div class="main-parent">
+                <div class="water-tank">
+                    <div class="arrows">
+                        <div class="arrow" id="arrow-0"><ion-icon name="arrow-round-forward"></ion-icon></div>
+                        <div class="arrow" id="arrow-1"><ion-icon name="arrow-round-forward"></ion-icon></div>
+                        <div class="arrow" id="arrow-2"><ion-icon name="arrow-round-forward"></ion-icon></div>
+                    </div>
+                    <div class="tank">water tank</div>
+                </div>
+                <!-- clear the floats -->
+                <div class="clearfix"></div>
+                <div class="station-parent">
+                    <div class="station" id="station-0">
+                        <div class="station-light trapezoid">
+                            <button class="popup lightInf0_open" id="light-0"><ion-icon name="sunny"></ion-icon></button>
+                        </div>
+                        <div class="station-plant">
+                            <img src="img/plantpng.png">
+                            <button class="popup moistureInf0_open" id="moisture-0"><ion-icon name="water"></ion-icon></button>
+                        </div>
+                    </div>
+                    <div class="station" id="station-1">
+                        <div class="station-light trapezoid">
+                            <button class="popup lightInf1_open" id="light-1"><ion-icon name="sunny"></ion-icon></button>
+                        </div>
+                        <div class="station-plant">
+                            <img src="img/plantpng.png">
+                            <button class="popup moistureInf1_open" id="moisture-1"><ion-icon name="water"></ion-icon></button>
+                        </div>
+                    </div>
+                    <div class="station" id="station-2">
+                        <div class="station-light trapezoid">
+                            <button class="popup lightInf2_open" id="light-2"><ion-icon name="sunny"></ion-icon></button>
+                        </div>
+                        <div class="station-plant">
+                            <img src="img/plantpng.png">
+                            <button class="popup moistureInf2_open" id="moisture-2"><ion-icon name="water"></ion-icon></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Build with ❤ in Santa Clara, CA.</p>
+        </footer>
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/lyolya" title="Lyolya">Lyolya</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+        
+        <section id="lightInf0">
+            <h2>Light Overview</h2>
+            <p>This plant has received 9 hours of daylight today.</p>
+        </section>
+        <section id="lightInf1">
+            <h2>Light Overview</h2>
+            <p>This plant has received 10 hours of daylight today.</p>
+        </section>
+        <section id="lightInf2">
+            <h2>Light Overview</h2>
+            <p>This plant has received 11 hours of daylight today.</p>
+        </section>
+        <section id="moistureInf0">
+            <h2>Moisture Overview</h2>
+            <p>This plant has been recently watered.</p>
+        </section>
+        <section id="moistureInf1">
+            <h2>Moisture Overview</h2>
+            <p>This plant is moisturized.</p>
+        </section>
+        <section id="moistureInf2">
+            <h2>Moisture Overview</h2>
+            <p>This plant is going to be watered soon.</p>
+        </section>
+        
+        
+    </body>
+    
+    <!--include jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+
+</html>
