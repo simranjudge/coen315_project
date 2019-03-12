@@ -24,14 +24,14 @@ resources = {
 
 app.post("/:resource", (req, res) => {
   resources[resource] = req.params.split(",");
-})(
-  app.get("/plants", (req, res) => {
+});
+
+app.get("/plants", (req, res) => {
     Object.entries(resources).map(([key, plantValues]) => {
       // key == waterLevels
       return plantValues.map(([value, id]) => ({ [key]: value, id }));
     });
-  })()
-);
+});
 
 // [{...resourceNames},]
 

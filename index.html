@@ -19,40 +19,66 @@
             <div class="main-parent">
                 <div class="water-tank">
                     <div class="arrows">
-                        <div class="arrow" id="arrow-0"><ion-icon name="arrow-round-forward"></ion-icon></div>
+                        <div class="arrow hide" id="arrow-0"><ion-icon name="arrow-round-forward"></ion-icon></div>
                         <div class="arrow" id="arrow-1"><ion-icon name="arrow-round-forward"></ion-icon></div>
-                        <div class="arrow" id="arrow-2"><ion-icon name="arrow-round-forward"></ion-icon></div>
+                        <div class="arrow hide" id="arrow-2"><ion-icon name="arrow-round-forward" md="md-arrow-round-forward" ios="ios-arrow-round-forward"></ion-icon></div>
                     </div>
-                    <div class="tank">water tank</div>
+                    <div class="tank">
+                        <h3>Water Tank</h3>
+                    </div>
                 </div>
                 <!-- clear the floats -->
                 <div class="clearfix"></div>
                 <div class="station-parent">
                     <div class="station" id="station-0">
+                        <h3>Spearmint</h3>
                         <div class="station-light trapezoid">
-                            <button class="popup lightInf0_open" id="light-0"><ion-icon name="sunny"></ion-icon></button>
+                            <button class="action" id="light-0"><ion-icon name="sunny"></ion-icon></button>
+                        </div>
+                        <div class="station-lightInfo">
+                            <p>Hours of light today: <span id="lightInfo-0">9</span></p>
+                            <p>Light bulb is: <span id="bulbState-0">ON</span></p>
                         </div>
                         <div class="station-plant">
                             <img src="img/plantpng.png">
-                            <button class="popup moistureInf0_open" id="moisture-0"><ion-icon name="water"></ion-icon></button>
+                            <button class="action" id="moisture-0"><ion-icon name="water"></ion-icon></button>
+                        </div>
+                        <div class="station-plantInfo">
+                            <p>Moisture: <span id="moistureInf-0">0 %</span></p>
                         </div>
                     </div>
                     <div class="station" id="station-1">
+                        <h3>Thyme</h3>
                         <div class="station-light trapezoid">
-                            <button class="popup lightInf1_open" id="light-1"><ion-icon name="sunny"></ion-icon></button>
+                            <button class="action" id="light-1"><ion-icon name="sunny"></ion-icon></button>
+                        </div>
+                        <div class="station-lightInfo">
+                            <p>Hours of light today: <span id="lightInfo-1">10</span></p>
+                            <p>Light bulb is: <span id="bulbState-1">ON</span></p>
                         </div>
                         <div class="station-plant">
                             <img src="img/plantpng.png">
-                            <button class="popup moistureInf1_open" id="moisture-1"><ion-icon name="water"></ion-icon></button>
+                            <button class="action" id="moisture-1"><ion-icon name="water"></ion-icon></button>
+                        </div>
+                        <div class="station-plantInfo">
+                            <p>Moisture: <span id="moistureInf-1">25 %</span></p>
                         </div>
                     </div>
                     <div class="station" id="station-2">
+                        <h3>Parsley</h3>
                         <div class="station-light trapezoid">
-                            <button class="popup lightInf2_open" id="light-2"><ion-icon name="sunny"></ion-icon></button>
+                            <button class="action" id="light-2"><ion-icon name="sunny"></ion-icon></button>
+                        </div>
+                        <div class="station-lightInfo">
+                            <p>Hours of light today: <span id="lightInfo-2">5</span></p>
+                            <p>Light bulb is: <span id="bulbState-2">OFF</span></p>
                         </div>
                         <div class="station-plant">
                             <img src="img/plantpng.png">
-                            <button class="popup moistureInf2_open" id="moisture-2"><ion-icon name="water"></ion-icon></button>
+                            <button class="action" id="moisture-2"><ion-icon name="water"></ion-icon></button>
+                        </div>
+                        <div class="station-plantInfo">
+                            <p>Moisture: <span id="moistureInf-2">75 %</span></p>
                         </div>
                     </div>
                 </div>
@@ -65,6 +91,7 @@
         <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         <div>Icons made by <a href="https://www.flaticon.com/authors/lyolya" title="Lyolya">Lyolya</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
         
+        <!--
         <section id="lightInf0">
             <h2>Light Overview</h2>
             <p>This plant has received 9 hours of daylight today.</p>
@@ -89,13 +116,12 @@
             <h2>Moisture Overview</h2>
             <p>This plant is going to be watered soon.</p>
         </section>
-        
+        -->
         
     </body>
     
     <!--include jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
     <script src="script.js"></script>
 
