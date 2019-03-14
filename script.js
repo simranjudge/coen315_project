@@ -32,4 +32,11 @@ $('.action').click(function() {
     }
 });
 
+async function getResults() {
+	const result = await
+	fetch('http://instaplants.sim315.com/plants');
+	const data = await result.json();
+	console.log(data);
+}
 
+getResults();
