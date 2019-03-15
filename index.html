@@ -4,44 +4,54 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- google font (Thasadith) -->
-        
+        <!-- google font (Montserrat) -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Ecosystems - self-caring planters</title>
+        <title>Instaplants - self-caring planters</title>
         
     </head>
     <body>
         <header>
-            <h1>ecosystems</h1>
+            <h1>instaplants</h1>
             <h2>Fresh Herbs With Zero Effort</h2>
         </header>
         <main>
             <div class="main-parent">
+                
+                <div class="legend">
+                    <p><ion-icon name="sunny"></ion-icon>click to turn light ON or OFF</p>
+                    <p><ion-icon name="water"></ion-icon>click to water the plant</p>
+                </div>
+                
                 <div class="water-tank">
                     <div class="arrows">
-                        <div class="arrow hide" id="arrow-0"><ion-icon name="arrow-round-forward"></ion-icon></div>
-                        <div class="arrow" id="arrow-1"><ion-icon name="arrow-round-forward"></ion-icon></div>
+                        <div class="arrow hide" id="arrow-0">
+                            <ion-icon name="arrow-round-forward"></ion-icon></div>
+                        <div class="arrow hide" id="arrow-1"><ion-icon name="arrow-round-forward"></ion-icon></div>
                         <div class="arrow hide" id="arrow-2"><ion-icon name="arrow-round-forward" md="md-arrow-round-forward" ios="ios-arrow-round-forward"></ion-icon></div>
                     </div>
                     <div class="tank">
                         <h3>Water Tank</h3>
                     </div>
                 </div>
+                
                 <!-- clear the floats -->
                 <div class="clearfix"></div>
+                
                 <div class="station-parent">
                     <div class="station" id="station-0">
                         <h3>Spearmint</h3>
                         <div class="station-light trapezoid">
-                            <button class="action" id="light-0"><ion-icon name="sunny"></ion-icon></button>
+                            <button class="action" id="light-0"><ion-icon class="spin" name="sunny"></ion-icon></button>
                         </div>
                         <div class="station-lightInfo">
-                            <p>Hours of light today: <span id="lightInfo-0">9</span></p>
-                            <p>Light bulb is: <span id="bulbState-0">ON</span></p>
+                            <p>Daylight: <span id="lightInfo-0">low</span></p>
+                            <p>Light bulb: <span id="bulbState-0">ON</span></p>
                         </div>
                         <div class="station-plant">
                             <img src="img/plantpng.png">
-                            <button class="action" id="moisture-0"><ion-icon name="water"></ion-icon></button>
+                            <button class="action" id="moisture-0"><ion-icon class="tada" name="water"></ion-icon></button>
                         </div>
                         <div class="station-plantInfo">
                             <p>Moisture: <span id="moistureInf-0">0 %</span></p>
@@ -53,8 +63,8 @@
                             <button class="action" id="light-1"><ion-icon name="sunny"></ion-icon></button>
                         </div>
                         <div class="station-lightInfo">
-                            <p>Hours of light today: <span id="lightInfo-1">10</span></p>
-                            <p>Light bulb is: <span id="bulbState-1">ON</span></p>
+                            <p>Daylight: <span id="lightInfo-1">none</span></p>
+                            <p>Light bulb: <span id="bulbState-1">ON</span></p>
                         </div>
                         <div class="station-plant">
                             <img src="img/plantpng.png">
@@ -70,8 +80,8 @@
                             <button class="action" id="light-2"><ion-icon name="sunny"></ion-icon></button>
                         </div>
                         <div class="station-lightInfo">
-                            <p>Hours of light today: <span id="lightInfo-2">5</span></p>
-                            <p>Light bulb is: <span id="bulbState-2">OFF</span></p>
+                            <p>Daylight: <span id="lightInfo-2">medium</span></p>
+                            <p>Light bulb: <span id="bulbState-2">OFF</span></p>
                         </div>
                         <div class="station-plant">
                             <img src="img/plantpng.png">
@@ -86,38 +96,10 @@
         </main>
         <footer>
             <p>Build with ❤ in Santa Clara, CA.</p>
+            <br>
+            <p class="developers">Developers:<br>Michaela Vuklisevicova<br>Simran Judge<br>Linh Tran<br>Abhimanyu Choudhary</p>
+            <a href="https://github.com/simranjudge/coen315_project" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
         </footer>
-        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-        <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/lyolya" title="Lyolya">Lyolya</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
-        
-        <!--
-        <section id="lightInf0">
-            <h2>Light Overview</h2>
-            <p>This plant has received 9 hours of daylight today.</p>
-        </section>
-        <section id="lightInf1">
-            <h2>Light Overview</h2>
-            <p>This plant has received 10 hours of daylight today.</p>
-        </section>
-        <section id="lightInf2">
-            <h2>Light Overview</h2>
-            <p>This plant has received 11 hours of daylight today.</p>
-        </section>
-        <section id="moistureInf0">
-            <h2>Moisture Overview</h2>
-            <p>This plant has been recently watered.</p>
-        </section>
-        <section id="moistureInf1">
-            <h2>Moisture Overview</h2>
-            <p>This plant is moisturized.</p>
-        </section>
-        <section id="moistureInf2">
-            <h2>Moisture Overview</h2>
-            <p>This plant is going to be watered soon.</p>
-        </section>
-        -->
-        
     </body>
     
     <!--include jquery-->
