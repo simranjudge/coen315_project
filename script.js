@@ -48,26 +48,24 @@ async function getResults() {
             document.querySelectorAll('div.arrow').forEach( el => el.classList.add('hide'));
             if(waterLevel >= 80) {
                 // show top (green) arrow
-                console.log(document.getElementById('#arrow-0').classList);
                 document.getElementById('arrow-0').classList.remove('hide');
             }
             else if(waterLevel >= 40) {
-                console.log(document.getElementById('#arrow-1').classList);
                 document.getElementById('arrow-1').classList.remove('hide');
             }
             else {
                 document.getElementById('arrow-2').classList.remove('hide');
+                document.querySelector('.tank').innerHTML = "<h1 style=\"color:red;\">! REFILL WATER !</h1>";
             }
         
         // 2) loop through each station and update all the values
         for(let i = 0; i < 3; i++) {
             // update hours of light received
-            document.getElementById(`lightInfo-${i}`).textContent = "9";
+            document.getElementById(`lightInfo-${i}`).textContent = "dark";
             
             // update state of the light bulb
             if(data.lightBulbs[i] == 1) {
                 document.getElementById(`bulbState-${i}`).textContent = "ON";
-                console.log('here');
             }
             else {
                 document.getElementById(`bulbState-${i}`).textContent = "OFF";
@@ -76,11 +74,13 @@ async function getResults() {
             // update moisture
             document.getElementById(`moistureInf-${i}`).textContent = `${data.moistureLevels[i]} %`;
             
-            // plantTubes? lightSensors?
+            // lightSensors?
         }
     }
     catch(error) {
         alert(error);
     }
 };
+
 getResults();
+setInterval(getResults,10000);
