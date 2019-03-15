@@ -42,36 +42,39 @@ async function getResults() {
 
         // 1) update water level and display corresponding arrow
         const waterLevel = data.waterLevels[0];
+        console.log(waterLevel);
         
             // hide the current displayed arrow
-            document.querySelectorAll('.arrow').addClass('hide');
+            document.querySelectorAll('div.arrow').forEach( el => el.classList.add('hide'));
             if(waterLevel >= 80) {
                 // show top (green) arrow
-                document.getElementById('#arrow-0').removeClass('hide');
+                console.log(document.getElementById('#arrow-0').classList);
+                document.getElementById('arrow-0').classList.remove('hide');
             }
             else if(waterLevel >= 40) {
-                document.getElementById('#arrow-1').removeClass('hide');
+                console.log(document.getElementById('#arrow-1').classList);
+                document.getElementById('arrow-1').classList.remove('hide');
             }
             else {
-                document.getElementById('#arrow-2').removeClass('hide');
+                document.getElementById('arrow-2').classList.remove('hide');
             }
         
         // 2) loop through each station and update all the values
         for(let i = 0; i < 3; i++) {
-            
             // update hours of light received
-            document.getElementById(`#lightInfo-${i}`).value = "9";
+            document.getElementById(`lightInfo-${i}`).textContent = "9";
             
             // update state of the light bulb
             if(data.lightBulbs[i] == 1) {
-                document.getElementById(`#bulbState-${i}`).value = "ON";
+                document.getElementById(`bulbState-${i}`).textContent = "ON";
+                console.log('here');
             }
             else {
-                document.getElementById(`#bulbState-${i}`).value = "OFF";
+                document.getElementById(`bulbState-${i}`).textContent = "OFF";
             }
             
             // update moisture
-            document.getElementById(`#moistureInf-${i}`).value = `${data.moistureLevels[i]} %`;
+            document.getElementById(`moistureInf-${i}`).textContent = `${data.moistureLevels[i]} %`;
             
             // plantTubes? lightSensors?
         }
@@ -80,5 +83,4 @@ async function getResults() {
         alert(error);
     }
 };
-
 getResults();
