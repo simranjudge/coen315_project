@@ -46,11 +46,12 @@ async function getResults() {
         
             // hide the current displayed arrow
             document.querySelectorAll('div.arrow').forEach( el => el.classList.add('hide'));
+            document.querySelector('.tank').innerHTML = "<h3>Water Tank</h3>";
             if(waterLevel >= 80) {
                 // show top (green) arrow
                 document.getElementById('arrow-0').classList.remove('hide');
             }
-            else if(waterLevel >= 40) {
+            else if(waterLevel >= 60) {
                 document.getElementById('arrow-1').classList.remove('hide');
             }
             else {
@@ -60,21 +61,38 @@ async function getResults() {
         
         // 2) loop through each station and update all the values
         for(let i = 0; i < 3; i++) {
-            // update hours of light received
-            document.getElementById(`lightInfo-${i}`).textContent = "dark";
+            // update natural light received - lightSensors
+            if(data.lightSensors[0] <= 10) {
+                document.getElementById(`lightInfo-${i}`).textContent = "dark";
+                document.getElementById(`bulbState-${i}`).textContent = "OFF";
+            }
+            else if(data.lightSensors[0] <= 30) {
+                document.getElementById(`lightInfo-${i}`).textContent = "very low";
+                document.getElementById(`bulbState-${i}`).textContent = "OFF";
+            }
+            else if(data.lightSensors[0] <= 50) {
+                document.getElementById(`lightInfo-${i}`).textContent = "low";
+                document.getElementById(`bulbState-${i}`).textContent = "ON";
+            }
+            else if(data.lightSensors[0] <= 70) {
+                document.getElementById(`lightInfo-${i}`).textContent = "medium";
+                document.getElementById(`bulbState-${i}`).textContent = "ON";
+            }
+            else {
+               document.getElementById(`lightInfo-${i}`).textContent = "bright";
+                document.getElementById(`bulbState-${i}`).textContent = "ON";
+            }
             
             // update state of the light bulb
-            if(data.lightBulbs[i] == 1) {
+            /*if(data.lightBulbs[0] == 1) {
                 document.getElementById(`bulbState-${i}`).textContent = "ON";
             }
             else {
                 document.getElementById(`bulbState-${i}`).textContent = "OFF";
-            }
+            }*/
             
-            // update moisture
+            // update moisture levels
             document.getElementById(`moistureInf-${i}`).textContent = `${data.moistureLevels[i]} %`;
-            
-            // lightSensors?
         }
     }
     catch(error) {
